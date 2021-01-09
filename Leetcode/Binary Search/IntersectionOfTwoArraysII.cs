@@ -14,7 +14,7 @@ namespace Leetcode.Binary_Search
 
 			for (int i = 0; i < nums1.Length; i++)
 			{
-				if(!keyFrequency1.ContainsKey(nums1[i]))
+				if (!keyFrequency1.ContainsKey(nums1[i]))
 				{
 					keyFrequency1.Add(nums1[i], 1);
 				}
@@ -35,11 +35,11 @@ namespace Leetcode.Binary_Search
 				}
 			}
 
-			foreach(KeyValuePair<int,int> KV in keyFrequency1)
+			foreach (KeyValuePair<int, int> KV in keyFrequency1)
 			{
-				if(keyFrequency2.ContainsKey(KV.Key))
+				if (keyFrequency2.ContainsKey(KV.Key))
 				{
-					for(int i = 1; i<= Math.Min(KV.Value,keyFrequency2[KV.Key]); i++)
+					for (int i = 1; i <= Math.Min(KV.Value, keyFrequency2[KV.Key]); i++)
 					{
 						result.Add(KV.Key);
 					}
@@ -52,11 +52,11 @@ namespace Leetcode.Binary_Search
 			HashSet<int> indexesConsidered = new HashSet<int>();
 			List<int> result = new List<int>();
 
-			for(int i = 0; i<nums1.Length; i++)
+			for (int i = 0; i < nums1.Length; i++)
 			{
 				for (int j = 0; j < nums2.Length; j++)
 				{
-					if(!indexesConsidered.Contains(j) && nums1[i] == nums2[j])
+					if (!indexesConsidered.Contains(j) && nums1[i] == nums2[j])
 					{
 						indexesConsidered.Add(j);
 						result.Add(nums1[i]);
@@ -65,6 +65,42 @@ namespace Leetcode.Binary_Search
 				}
 			}
 			return result.ToArray();
+		}
+
+		public int[] IntersectOptimized(int[] nums1, int[] nums2)
+		{
+			Dictionary<int, int> keyFreq = new Dictionary<int, int>();
+
+			List<int> res = new List<int>();
+
+			foreach (int i in nums1)
+			{
+				if (!keyFreq.ContainsKey(i))
+				{
+					keyFreq.Add(i, 1);
+				}
+				else
+				{
+					keyFreq[i]++;
+				}
+			}
+
+			foreach (int i in nums2)
+			{
+				int c = keyFreq.GetValueOrDefault(i, 0);
+
+				if (c > 0)
+				{
+					res.Add(i);
+					keyFreq[i] = c - 1;
+				}
+			}
+
+			return res.ToArray();
+		}
+		public int[] IntersectSorted(int[] nums1, int[] nums2)
+		{
+
 		}
 	}
 }
