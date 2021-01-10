@@ -11,7 +11,7 @@ namespace Leetcode
 	{
 		static void Main(string[] args)
 		{
-			int[] num1 = { 3, 2, 2, 4, 1, 4 };
+			int[] num1 = { 1, 1, 2, 3, 3, 4, 4, 8, 8 };
 			int[] num2 = { 1, 0 };//, 1, 1, 0 };
 			int[] num3 = { 1, 0 };//, 0, 0, 0 };
 			int[] num4 = { 1, 1 };//, 0, 0, 0 };
