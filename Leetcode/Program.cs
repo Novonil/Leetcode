@@ -25,18 +25,18 @@ namespace Leetcode
 			//nums[4] = num5;
 
 
-			//Console.WriteLine(SearchInARotatedSortedArray.Search(nums, 4));
-			CustomFunction customfunction = new CustomFunction();
+			Console.WriteLine(ArrangingCoins.ArrangeCoins(3));
+			//CustomFunction customfunction = new CustomFunction();
 			//Console.WriteLine(FindPositiveIntegerSolutionForAGivenEquation.FindSolution(customfunction, 6));
 			//int[] arr = /*MedianOfTwoSortedArrays.FindMedianSortedArrays*/(num1,num2);
 
 			//IList<IList<int>> l = new List<IList<int>>();
-			int[] l = TwoSumIIArrayIsSorted.TwoSum(num1, 9);
+			//int[] l = TwoSumIIArrayIsSorted.TwoSum(num1, 9);
 
-			foreach (int i in l)
-			{
-				Console.WriteLine(i);
-			}
+			//foreach (int i in l)
+			//{
+			//	Console.WriteLine(i);
+			//}
 			Console.ReadLine();
 		}
 	}

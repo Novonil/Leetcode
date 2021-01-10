@@ -100,7 +100,7 @@ namespace Leetcode.Binary_Search
 		}
 		public int[] IntersectSorted(int[] nums1, int[] nums2)
 		{
-
+			return new int[] { };
 		}
 	}
 }
