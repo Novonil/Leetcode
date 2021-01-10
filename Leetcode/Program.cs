@@ -11,7 +11,7 @@ namespace Leetcode
 	{
 		static void Main(string[] args)
 		{
-			int[] num1 = { 2, 7, 11, 15 };//, 0, 0, 0 };
+			int[] num1 = { 3, 2, 2, 4, 1, 4 };
 			int[] num2 = { 1, 0 };//, 1, 1, 0 };
 			int[] num3 = { 1, 0 };//, 0, 0, 0 };
 			int[] num4 = { 1, 1 };//, 0, 0, 0 };
@@ -25,7 +25,10 @@ namespace Leetcode
 			//nums[4] = num5;
 
 
-			Console.WriteLine(ArrangingCoins.ArrangeCoins(3));
+			Console.WriteLine(CapacityToShipPackagesWithinDDays.ShipWithinDays(num1, 3));
+
+
+			//Console.WriteLine(ArrangingCoins.ArrangeCoins(3));
 			//CustomFunction customfunction = new CustomFunction();
 			//Console.WriteLine(FindPositiveIntegerSolutionForAGivenEquation.FindSolution(customfunction, 6));
 			//int[] arr = /*MedianOfTwoSortedArrays.FindMedianSortedArrays*/(num1,num2);
