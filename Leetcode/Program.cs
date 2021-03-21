@@ -25,7 +25,7 @@ namespace Leetcode
 			//nums[4] = num5;
 
 
-			Console.WriteLine(KthSmallestElementInASortedMatrix.KthSmallest(nums, 8	));
+			//Console.WriteLine(KthSmallestElementInASortedMatrix.KthSmallest(nums, 8	));
 
 
 			//Console.WriteLine(ArrangingCoins.ArrangeCoins(3));
@@ -40,6 +40,11 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
+			int[] num = { 1,3,1,2,0,5 };
+			string s = "eceba"; string t = "ABC";
+			int i = LongestStringWithAtmostKDistinctCharacters.LengthOfLongestSubstringKDistinct(s,2);
+			
+				Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}
