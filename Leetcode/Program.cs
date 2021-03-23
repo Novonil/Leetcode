@@ -40,11 +40,11 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 1,3,1,2,0,5 };
-			string s = "eceba"; string t = "ABC";
-			int i = LongestStringWithAtmostKDistinctCharacters.LengthOfLongestSubstringKDistinct(s,2);
+			int[] num = { 1, 4, 2, 3 };
+			string s = "eidbaooo"; string t = "ab";
+			bool res = PermutationInString.CheckInclusion(t,s);
 			
-				Console.WriteLine(i);
+				Console.WriteLine(res);
 			Console.ReadLine();
 		}
 	}
