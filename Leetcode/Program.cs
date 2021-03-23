@@ -40,9 +40,9 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 1, 4, 2, 3 };
-			string s = "eidbaooo"; string t = "ab";
-			bool res = PermutationInString.CheckInclusion(t,s);
+			int[] num = { 3, 2 };
+			string s = "abcdebdde"; string t = "bde";
+			int res = DietPlanPerformance.DietPlanPerformances(num, 2, 0, 1);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();
