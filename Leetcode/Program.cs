@@ -40,9 +40,9 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 3, 2 };
+			int[] num = { 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1 };
 			string s = "abcdebdde"; string t = "bde";
-			int res = DietPlanPerformance.DietPlanPerformances(num, 2, 0, 1);
+			int res = MaxConsecutiveOnesIII.LongestOnes(num, 3);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();
