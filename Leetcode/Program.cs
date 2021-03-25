@@ -40,9 +40,11 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1 };
-			string s = "abcdebdde"; string t = "bde";
-			int res = MaxConsecutiveOnesIII.LongestOnes(num, 3);
+			int[] num = { 8, 2, 4, 7 };
+			int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
+			string s = "baaabcb";
+			string t = "tyhxrxiaerrwcxrbfqmrcxkek";
+			int res = LongestSubstringWithAtLeastKRepeatingCharacters.LongestSubstring(s, 3);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();

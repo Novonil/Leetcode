@@ -1,50 +1,92 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Leetcode.SlidingWindow
 {
 	class LongestSubstringWithAtLeastKRepeatingCharacters
 	{
-		public int LongestSubstring(string s, int k)
+		public static int LongestSubstring(string s, int k)
 		{
-			if (k == 1)
+			if(k==1)
 			{
 				return s.Length;
 			}
+
 			int size = s.Length;
-			int left = 0;
-			int right = 0;
-			int countOfCharsCrossingK = 0;
-			Dictionary<char, int> charMap = new Dictionary<char, int>();
-			int maxSubstring = 0;
+			int maxUnique = getMaxUniqueLetters(s);
+			int maxSubstring = int.MinValue;
 
-			while(right < size)
+			for(int currUnique = 1; currUnique <= maxUnique; currUnique++)
 			{
-				if(charMap.ContainsKey(s[right]))
-				{
-					charMap[s[right]]++;
-				}
-				else
-				{
-					charMap.Add(s[right], 1);
-				}
-				if(charMap[s[right]] == k)
-				{
-					countOfCharsCrossingK++;
-				}
+				int left = 0;
+				int right = 0;
+				int totalUnique = 0;
+				int idx = 0;
+				int countAtLeastK = 0;
+				int[] charMap = new int[26];
 
-				if(countOfCharsCrossingK == charMap.Count)
+				while(right < size)
 				{
-					maxSubstring = Math.Max(maxSubstring, right - left + 1);
-				}
-				else
-				{
+					if(totalUnique <= currUnique)
+					{
+						idx = s[right] - 'a';
 
+						if(charMap[idx] == 0)
+						{
+							totalUnique++;
+						}
+						
+						charMap[idx]++;
+
+						if(charMap[idx] == k)
+						{
+							countAtLeastK++;
+						}
+						right++;
+					}
+					else
+					{
+						idx = s[left] - 'a';
+
+						if(charMap[idx] == k)
+						{
+							countAtLeastK--;
+						}
+						
+						charMap[idx]--;
+
+						if(charMap[idx] == 0)
+						{
+							totalUnique--;
+						}
+						left++;
+					}
+					if(totalUnique == currUnique && countAtLeastK == currUnique)
+					{
+						maxSubstring = Math.Max(maxSubstring, right - left);
+					}
 				}
-				right++;
 			}
 			return maxSubstring;
+		}
+		public static int getMaxUniqueLetters(string s)
+		{
+			bool[] charMap = new bool[26];
+			int maxUnique = 0;
+			int idx = 0;
+
+			foreach(char c in s)
+			{
+				idx = c - 'a';
+				if(!charMap[idx])
+				{
+					maxUnique++;
+					charMap[idx] = true;
+				}
+			}
+			return maxUnique;
 		}
 	}
 }
