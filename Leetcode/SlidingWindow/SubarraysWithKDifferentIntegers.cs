@@ -6,52 +6,33 @@ namespace Leetcode.SlidingWindow
 {
 	class SubarraysWithKDifferentIntegers
 	{
-		public static int SubarraysWithKDistinct(int[] A, int K)
+		public static int SubarraysWithKDistinctBruteForce(int[] A, int K)
 		{
-			int size = A.Length;
-			int left = 0;
-			int right = 0;
-			Dictionary<int, int> numberMap = new Dictionary<int, int>();
-			int countOfSubarrays = 0;
-
-			while(right < size)
+			int count = 0;
+			for(int left = 0; left < A.Length; left++)
 			{
-				if(numberMap.ContainsKey(A[right]))
-				{
-					numberMap[A[right]]++;
-				}
-				else
-				{
-					numberMap.Add(A[right], 1);
-				}
+				int countOfUniqueNums = 0;
+				HashSet<int> seen = new HashSet<int>();
 
-				if(numberMap.Count == K)
+				for(int right = left; right < A.Length; right++)
 				{
-					countOfSubarrays++;
-				}
-				else if (numberMap.Count > K)
-				{
-					while (numberMap.Count > K)
+					if(!seen.Contains(A[right]))
 					{
-						if (numberMap.ContainsKey(A[left]))
-						{
-							numberMap[A[left]]--;
-							if (numberMap[A[left]] == 0)
-							{
-								numberMap.Remove(A[left]);
-							}
-						}
-						left++;
+						countOfUniqueNums++;
+						seen.Add(A[right]);
 					}
-					if (numberMap.Count == K)
+					if(countOfUniqueNums == K)
 					{
-						countOfSubarrays++;
+						count++;
 					}
 				}
-				right++;
 			}
-
-			return countOfSubarrays;
+			return count;
 		}
+
+		//public static int SubarrayWithKDistinct(int[] A, int K)
+		//{
+
+		//}
 	}
 }

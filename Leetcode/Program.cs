@@ -40,11 +40,11 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 8, 2, 4, 7 };
+			int[] num = { 1, 2, 1, 2, 3 };
 			int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
-			string s = "baaabcb";
-			string t = "tyhxrxiaerrwcxrbfqmrcxkek";
-			int res = LongestSubstringWithAtLeastKRepeatingCharacters.LongestSubstring(s, 3);
+			string s = "home";
+			string t = "havefunonleetcode";
+			int res = FindKLengthSubstringWithNoRepeatedCharacters.NumKLenSubstrNoRepeats(s, 5);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();
