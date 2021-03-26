@@ -42,9 +42,9 @@ namespace Leetcode
 			//}
 			int[] num = { 1, 2, 1, 2, 3 };
 			int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
-			string s = "home";
+			string s = "ABAB";
 			string t = "havefunonleetcode";
-			int res = FindKLengthSubstringWithNoRepeatedCharacters.NumKLenSubstrNoRepeats(s, 5);
+			int res = LongestRepeatingCharacterReplacement.CharacterReplacement(s, 2);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();
