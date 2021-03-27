@@ -40,11 +40,14 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 1, 2, 1, 2, 3 };
-			int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
-			string s = "ABAB";
-			string t = "havefunonleetcode";
-			int res = LongestRepeatingCharacterReplacement.CharacterReplacement(s, 2);
+			int[] num = { 1, 2, 1, 3, 4 };
+
+
+			//int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
+			//string s = "ABAB";
+			//string t = "havefunonleetcode";
+			
+			int res = SubarraysWithKDifferentIntegers.SubarrayWithKDistinct(num, 3);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();

@@ -1,51 +1,53 @@
-﻿using NetTopologySuite.Utilities;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Leetcode.SlidingWindow
 {
 	class SlidingWindowMedian
 	{
-		public static double[] MedianSlidingWindow(int[] nums, int k)
-		{
-			int size = nums.Length;
-			int left = 0;
-			int right = 0;
-			double[] result = new double[size - k + 1];
-			//PriorityQueue<int> minHeap = new PriorityQueue<int>();
-			//PriorityQueue<int> maxHeap = new PriorityQueue<int>(k/2, );
-			//SortedList<int,int> list = new SortedList<int,int>();
+		//public static double[] MedianSlidingWindow(int[] nums, int k)
+		//{
+		//	int i = 0;
+		//	int c = 0;
+		//	int balance = 0;
+		//	int size = nums.Length;
+		//	double[] result = new double[size - k + 1];
 
-			List<int> l = new List<int>();
-			
+		//	SortedSet<int> lo = new SortedSet<int>(Comparer<int>.Create((a,b) =>
+		//	{
+		//		int result = b.CompareTo(a);
+		//		return result;
+		//	}));
+		//	SortedSet<int> hi = new SortedSet<int>();
+
+		//	while(i<k)
+		//	{
+		//		lo.Add(nums[i++]);
+		//	}
+		//	for(int j = 0; j < k/2; j++)
+		//	{
+		//		hi.Add(lo.First());
+		//		lo.ElementAt(0);
+		//	}
+
+		//	while(true)
+		//	{
+		//		result[c++] = i % 2 == 0 ? (hi.First() + lo.First() * 0.5): lo.First();
+
+		//		if (i > size)
+		//			break;
+
+		//		int out_num = nums[i - k];
+		//		int in_num = nums[i++];
+		//		balance = 0;
+				
 
 
-			while (right < size)
-			{
-				l.Add(nums[right]);
-				if (right - left + 1 == k)
-				{
-					List<int> dup = new List<int>(l);
-					dup.Sort();
-					if(k % 2 == 0)
-					{
-						long sum = (long)dup[k / 2 - 1] + (long)dup[k / 2];
-						result[left] = sum / 2.0;
-					}
-					else
-					{
-						result[left] = (double) dup[k / 2];
-					}
-					l.Remove(nums[left]);
-					left++;
-				}
-				right++;
-			}
-
-			return result;
-		}
+		//	}
+		//}
 
 		public static double[] MedianSlidingWindowBruteForce(int[] nums, int k)
 		{
