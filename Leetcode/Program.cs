@@ -40,14 +40,14 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 1, 2, 1, 3, 4 };
+			int[] num = { 0, 0, 0, 1, 0, 1, 1, 0 };
 
 
 			//int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
 			//string s = "ABAB";
 			//string t = "havefunonleetcode";
 			
-			int res = SubarraysWithKDifferentIntegers.SubarrayWithKDistinct(num, 3);
+			int res = MinimumNumberOfKConsecutiveBitFlips.MinKBitFlips(num, 3);
 			
 				Console.WriteLine(res);
 			Console.ReadLine();
