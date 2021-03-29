@@ -1,5 +1,6 @@
 ﻿using Leetcode.Arrays;
 using Leetcode.Binary_Search;
+using Leetcode.Heaps;
 using Leetcode.SlidingWindow;
 using Leetcode.Stack;
 using System;
@@ -40,16 +41,26 @@ namespace Leetcode
 			//{
 			//	Console.WriteLine(i);
 			//}
-			int[] num = { 0, 0, 0, 1, 0, 1, 1, 0 };
+			//int[] num = { 0, 0, 0, 1, 0, 1, 1, 0 };
 
 
 			//int[] nums1 = { 0, 1, 0, 1, 0, 1, 0, 1 };
 			//string s = "ABAB";
 			//string t = "havefunonleetcode";
+
+			//int res = MinimumNumberOfKConsecutiveBitFlips.MinKBitFlips(num, 3);
+
+			int[] num = { 4, 5, 8, 2 };
+			//int res = LastStoneWeight.lastStoneWeight(num);
+
+
+			KthLargestEkementInAStream k = new KthLargestEkementInAStream(3, num);
 			
-			int res = MinimumNumberOfKConsecutiveBitFlips.MinKBitFlips(num, 3);
-			
-				Console.WriteLine(res);
+			Console.WriteLine(k.Add(3));
+			Console.WriteLine(k.Add(5));
+			Console.WriteLine(k.Add(10));
+			Console.WriteLine(k.Add(9));
+			Console.WriteLine(k.Add(4));
 			Console.ReadLine();
 		}
 	}
