@@ -54,13 +54,60 @@ namespace Leetcode
 			//int res = LastStoneWeight.lastStoneWeight(num);
 
 
-			KthLargestEkementInAStream k = new KthLargestEkementInAStream(3, num);
-			
-			Console.WriteLine(k.Add(3));
-			Console.WriteLine(k.Add(5));
-			Console.WriteLine(k.Add(10));
-			Console.WriteLine(k.Add(9));
-			Console.WriteLine(k.Add(4));
+			//KthLargestEkementInAStream k = new KthLargestEkementInAStream(3, num);
+
+			//Console.WriteLine(k.Add(3));
+			//Console.WriteLine(k.Add(5));
+			//Console.WriteLine(k.Add(10));
+			//Console.WriteLine(k.Add(9));
+			//Console.WriteLine(k.Add(4));
+
+
+			//int[][] arr = new int[2][];
+			//arr[0] = new int[] { 1,3 };
+			//arr[1] = new int[] { -2, 2};
+
+			//int[][] res = KClosestPointsToOrigin.KClosest(arr, 1);
+
+			//foreach(int[] r in res)
+			//{
+			//	Console.WriteLine(r[0] + " , " + r[1]);
+			//}
+
+
+			//string s = "Aabb";
+			//Console.WriteLine(SortChractersByFrequency.FrequencySort(s));
+
+
+			//int[] arr = { 3, 2, 3, 1, 2, 4, 5, 5, 6 };
+
+			//int res = KthLargestElementInAnArray.findKthLargest(arr, 4);
+			//foreach (int r in res)
+
+			//string[] s = { "i", "love", "leetcode", "i", "love", "coding" };
+
+
+			//IList<string> res = TopKFrequentWords.TopKFrequent(s, 2);
+			//foreach(string sr in res)
+			//{
+			//	Console.WriteLine(sr);
+			//}
+
+			//int[][] matrix = new int[3][];
+			//matrix[0] = new int[] { 1, 5, 9 };
+			//matrix[1] = new int[] { 10, 11, 13 };
+			//matrix[2] = new int[] { 12, 13, 15 };
+
+			//int res = Heaps.MaximumScoreFromRemovingStones.MaximumScoreHeap(4,4,6);,
+
+
+			int[][] n = new int[3][];
+			n[0] = new int[] { 1,2 };
+			n[1] = new int[] { 3, 5 };
+			n[2] = new int[] { 2, 2 };
+
+			double res = MaximumAveragePassRatio.maxAverageRatio(n, 2);
+			Console.WriteLine(res);
 			Console.ReadLine();
 		}
 	}
