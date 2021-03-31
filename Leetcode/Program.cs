@@ -101,13 +101,17 @@ namespace Leetcode
 			//int res = Heaps.MaximumScoreFromRemovingStones.MaximumScoreHeap(4,4,6);,
 
 
-			int[][] n = new int[3][];
-			n[0] = new int[] { 1,2 };
-			n[1] = new int[] { 3, 5 };
-			n[2] = new int[] { 2, 2 };
+			//int[][] n = new int[3][];
+			//n[0] = new int[] { 1,2 };
+			//n[1] = new int[] { 3, 5 };
+			//n[2] = new int[] { 2, 2 };
 
-			double res = MaximumAveragePassRatio.maxAverageRatio(n, 2);
-			Console.WriteLine(res);
+			//double res = MaximumAveragePassRatio.maxAverageRatio(n, 2);
+
+			//string res = ReorganizeString.ReorganizeStringFunc("aab");
+			int[] res = DistantBarcodes.RearrangeBarcodes(new int[] { 1, 1, 1, 2, 2, 2 });
+			foreach(int i in res)
+				Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}
