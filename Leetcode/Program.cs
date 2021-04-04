@@ -5,6 +5,7 @@ using Leetcode.SlidingWindow;
 using Leetcode.Stack;
 using System;
 using System.Collections.Generic;
+using static Leetcode.Arrays.KadanesIn2D;
 
 namespace Leetcode
 {
@@ -109,9 +110,19 @@ namespace Leetcode
 			//double res = MaximumAveragePassRatio.maxAverageRatio(n, 2);
 
 			//string res = ReorganizeString.ReorganizeStringFunc("aab");
-			int[] res = DistantBarcodes.RearrangeBarcodes(new int[] { 1, 1, 1, 2, 2, 2 });
-			foreach(int i in res)
-				Console.WriteLine(i);
+			//int res = KadanesInOneD.maximumSubarraySum(new int[] { 4, 3, -2, 6, -14, 7, -1, 4, 5, 7, -10, 2, 9, -10, -5 - 9, 6, 1 });
+
+			int[,] re = {
+							{ 2, 1, -3, -4, 5},
+							{ 0, 6, 3, 4, 1 },
+							{ 2, -2, -1, 4, -5},
+							{ -3, 3, 1, 0, 3}
+						};
+
+			Result res = KadanesIn2D.maxSumRectangle(re);
+			Console.WriteLine(res.ToString());
+			//foreach (int i in res)
+			//	Console.WriteLine(res);
 			Console.ReadLine();
 		}
 	}
