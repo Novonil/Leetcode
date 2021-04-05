@@ -119,16 +119,16 @@ namespace Leetcode
 			//				{ -3, 3, 1, 0, 3}
 			//			};
 
-			int[][] meetings = new int[3][];
-			meetings[0] = new int[] { 0, 30 };
-			meetings[1] = new int[] { 5, 10 };
-			meetings[2] = new int[] { 15, 20 };
+			//int[][] meetings = new int[3][];
+			//meetings[0] = new int[] { 0, 30 };
+			//meetings[1] = new int[] { 5, 10 };
+			//meetings[2] = new int[] { 15, 20 };
 
-
-			int res = MeetingRoomsII.minRoomsHeaps(meetings);
-			Console.WriteLine(res);
-			//foreach (int i in res)
-			//	Console.WriteLine(res);
+			int[] arr = { 2, 4, 3, 3, 5, 4, 9, 6 };
+			int[] res = Leetcode.Stack.FindTheMostCompetitiveSubsequence.mostCompetitive(arr,4);
+			//Console.WriteLine(res);
+			foreach (int i in res)
+				Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}

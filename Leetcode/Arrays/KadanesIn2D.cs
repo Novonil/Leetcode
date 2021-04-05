@@ -33,39 +33,7 @@ namespace Leetcode.Arrays
 						", lowerBound = " + bottom + "]";
 			}
 		}
-		public static int maximumSumMatrix(int[,] arr)
-		{
-			//Partha Da's method for kadanes
-			int row = arr.GetLength(0);
-			int col = arr.GetLength(1);
-			int[,] intermediate = new int[row,col];
-
-			intermediate[0, 0] = arr[0, 0];
-
-			for(int i = 1; i < row; i++)
-			{
-				intermediate[i, 0] = intermediate[i - 1, 0] + arr[i, 0];
-			}
-			for(int j = 1; j<col; j++)
-			{
-				intermediate[0, j] = intermediate[0, j - 1] + arr[0, j];
-			}
-			
-			for(int i = 1; i< row; i++)
-			{
-				for(int j = 1; j< col; j++)
-				
-				{
-					intermediate[i, j] = intermediate[i - 1, j] + intermediate[i, j - 1] - intermediate[i - 1, j - 1] + arr[i, j]; 
-				}
-			}
-			
-
-			
-			return 0;
-
-
-		}
+		
 
 		public static Result maxSumRectangle(int[,] arr)
 		{
