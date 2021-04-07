@@ -124,11 +124,20 @@ namespace Leetcode
 			//meetings[1] = new int[] { 5, 10 };
 			//meetings[2] = new int[] { 15, 20 };
 
-			int[] arr = { 2, 4, 3, 3, 5, 4, 9, 6 };
-			int[] res = Leetcode.Stack.FindTheMostCompetitiveSubsequence.mostCompetitive(arr,4);
-			//Console.WriteLine(res);
-			foreach (int i in res)
-				Console.WriteLine(i);
+			//int[] arr = { 1, 2, 3, 4, 4, 5 };
+			//int res = UglyNumberII.nthUglyNumber(1);
+
+
+			int[][] arr = new int[4][];
+			arr[0] = new int[] { 7, 1000000000, 1 };
+			arr[1] = new int[] { 15, 3, 0 };
+			arr[2] = new int[] { 5, 999999995, 0 };
+			arr[3] = new int[] { 5, 1, 1 };
+
+			int res = NumberOfOrdersInBacklog.getNumberOfBacklogOrders(arr);
+			Console.WriteLine(res);
+			//foreach (int i in res)
+			//	Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}
