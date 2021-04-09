@@ -128,16 +128,18 @@ namespace Leetcode
 			//int res = UglyNumberII.nthUglyNumber(1);
 
 
-			int[][] arr = new int[4][];
-			arr[0] = new int[] { 7, 1000000000, 1 };
-			arr[1] = new int[] { 15, 3, 0 };
-			arr[2] = new int[] { 5, 999999995, 0 };
-			arr[3] = new int[] { 5, 1, 1 };
+			//int[][] arr = new int[4][];
+			//arr[0] = new int[] { 7, 1000000000, 1 };
+			//arr[1] = new int[] { 15, 3, 0 };
+			//arr[2] = new int[] { 5, 999999995, 0 };
+			//arr[3] = new int[] { 5, 1, 1 };
 
-			int res = NumberOfOrdersInBacklog.getNumberOfBacklogOrders(arr);
-			Console.WriteLine(res);
-			//foreach (int i in res)
-			//	Console.WriteLine(i);
+			int[] arr1 = { 1, 7, 11 };
+			int[] arr2 = { 2, 4, 6 };
+			List<List<int>> res = FindKPairsWithSmallestSums.kSmallestPairs(arr1,arr2, 3);
+			//Console.WriteLine(res);
+			foreach (List<int> i in res)
+				Console.WriteLine(i[0] + " - " + i[1]);
 			Console.ReadLine();
 		}
 	}
