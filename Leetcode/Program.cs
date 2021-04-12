@@ -3,6 +3,7 @@ using Leetcode.Binary_Search;
 using Leetcode.Heaps;
 using Leetcode.SlidingWindow;
 using Leetcode.Stack;
+using Leetcode.Stacks;
 using System;
 using System.Collections.Generic;
 using static Leetcode.Arrays.KadanesIn2D;
@@ -134,12 +135,14 @@ namespace Leetcode
 			//arr[2] = new int[] { 5, 999999995, 0 };
 			//arr[3] = new int[] { 5, 1, 1 };
 
-			int[] arr1 = { 1, 7, 11 };
-			int[] arr2 = { 2, 4, 6 };
-			List<List<int>> res = FindKPairsWithSmallestSums.kSmallestPairs(arr1,arr2, 3);
-			//Console.WriteLine(res);
-			foreach (List<int> i in res)
-				Console.WriteLine(i[0] + " - " + i[1]);
+			//int[] arr1 = { 1, 7, 11 };
+			//int[] arr2 = { 2, 4, 6 };
+
+			string str = "(()())(())";
+			string res = RemoveOutermostParenthesis.removeOuterParenthesisConstantSpace(str);
+			Console.WriteLine(res);
+			//foreach (List<int> i in res)
+			//	Console.WriteLine(i[0] + " - " + i[1]);
 			Console.ReadLine();
 		}
 	}
