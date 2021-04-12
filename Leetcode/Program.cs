@@ -14,16 +14,16 @@ namespace Leetcode
 	{
 		static void Main(string[] args)
 		{
-			int[] num1 = { 1, 5, 9 };
-			int[] num2 = { 10, 11, 13 };//, 1, 1, 0 };
-			int[] num3 = { 12, 13, 15 };//, 0, 0, 0 };
-			int[] num4 = { 1, 1 };//, 0, 0, 0 };
-			int[] num5 = { 1, 1, 1, 1, 1 };
+			//int[] num1 = { 1, 5, 9 };
+			//int[] num2 = { 10, 11, 13 };//, 1, 1, 0 };
+			//int[] num3 = { 12, 13, 15 };//, 0, 0, 0 };
+			//int[] num4 = { 1, 1 };//, 0, 0, 0 };
+			//int[] num5 = { 1, 1, 1, 1, 1 };
 
-			int[][] nums = new int[3][];
-			nums[0] = num1;
-			nums[1] = num2;
-			nums[2] = num3;
+			//int[][] nums = new int[3][];
+			//nums[0] = num1;
+			//nums[1] = num2;
+			//nums[2] = num3;
 			//nums[3] = num4;
 			//nums[4] = num5;
 
@@ -138,11 +138,15 @@ namespace Leetcode
 			//int[] arr1 = { 1, 7, 11 };
 			//int[] arr2 = { 2, 4, 6 };
 
-			string str = "(()())(())";
-			string res = RemoveOutermostParenthesis.removeOuterParenthesisConstantSpace(str);
-			Console.WriteLine(res);
-			//foreach (List<int> i in res)
-			//	Console.WriteLine(i[0] + " - " + i[1]);
+			//string[] str = { "d1/", "d2/", "../", "d21/", "./" };
+
+			int[] nums1 = { 2,4 };
+			int[] nums2 = { 1, 2, 3, 4 };
+			Leetcode.Stacks.NextGreaterElementI ob = new Leetcode.Stacks.NextGreaterElementI();
+			int[] res = Leetcode.Stacks.NextGreaterElementI.res(nums1,nums2);
+			//Console.WriteLine(res);
+			foreach (int i in res)
+				Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}
