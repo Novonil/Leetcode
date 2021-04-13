@@ -4,13 +4,13 @@ using System.Text;
 
 namespace Leetcode.Stacks
 {
-	class ImplementStackUsingQueues
+	class ImplementQueueUsingStacks
 	{
         int front;
         Stack<int> s1;
         Stack<int> s2;
         /** Initialize your data structure here. */
-        public ImplementStackUsingQueues()
+        public ImplementQueueUsingStacks()
         {
             s1 = new Stack<int>();
             s2 = new Stack<int>();
