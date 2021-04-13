@@ -140,13 +140,35 @@ namespace Leetcode
 
 			//string[] str = { "d1/", "d2/", "../", "d21/", "./" };
 
-			int[] nums1 = { 2,4 };
-			int[] nums2 = { 1, 2, 3, 4 };
-			Leetcode.Stacks.NextGreaterElementI ob = new Leetcode.Stacks.NextGreaterElementI();
-			int[] res = Leetcode.Stacks.NextGreaterElementI.res(nums1,nums2);
+			//int[] nums1 = { 2,4 };
+			//int[] nums2 = { 1, 2, 3, 4 };
+			//Leetcode.Stacks.NextGreaterElementI ob = new Leetcode.Stacks.NextGreaterElementI();
+			//int[] res = Leetcode.Stacks.NextGreaterElementI.res(nums1,nums2);
+			//BackspaceStringCompare ob = new BackspaceStringCompare();
+			//bool res = Leetcode.Stacks.ValidParenthesis.IsValid("()");
+
+			Leetcode.Stacks.MinStack ms = new Leetcode.Stacks.MinStack();
+			ms.Push(2147483646);
+			ms.Push(2147483646);
+			ms.Push(2147483647);
+			Console.WriteLine(ms.Top());
+			ms.Pop();
+			Console.WriteLine(ms.GetMin());
+			ms.Pop();
+			Console.WriteLine(ms.GetMin());
+			ms.Pop();
+			ms.Push(2147483647);
+			Console.WriteLine(ms.Top());
+			Console.WriteLine(ms.GetMin());
+			ms.Push(-2147483648);
+			Console.WriteLine(ms.Top());
+			Console.WriteLine(ms.GetMin());
+			ms.Pop();
+			Console.WriteLine(ms.GetMin());
+
 			//Console.WriteLine(res);
-			foreach (int i in res)
-				Console.WriteLine(i);
+			//foreach (int i in res)
+			//	Console.WriteLine(i);
 			Console.ReadLine();
 		}
 	}
