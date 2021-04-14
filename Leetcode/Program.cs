@@ -6,6 +6,8 @@ using Leetcode.Stack;
 using Leetcode.Stacks;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using static Leetcode.Arrays.KadanesIn2D;
 
 namespace Leetcode
@@ -184,8 +186,25 @@ namespace Leetcode
 			//Console.WriteLine(d.Pop());
 			//Console.WriteLine(d.Pop());
 
-			string str = "0";
-			Console.WriteLine(str[0] - '1');
+			//string str = "0";
+			//Console.WriteLine(str[0] - '1');
+			//StringBuilder sb = new StringBuilder();
+			//sb.Insert(0,'a');
+
+			//sb.Append(String.Concat(Enumerable.Repeat("xyz",5)));
+			//Console.WriteLine(sb.ToString());
+			//Leetcode.Stacks.OnlineStockSpan ob = new Leetcode.Stacks.OnlineStockSpan();
+			//Console.WriteLine(ob.Next(100));
+			//Console.WriteLine(ob.Next(80));
+			//Console.WriteLine(ob.Next(60));
+			//Console.WriteLine(ob.Next(70));
+			//Console.WriteLine(ob.Next(60));
+			//Console.WriteLine(ob.Next(75));
+			//Console.WriteLine(ob.Next(85));
+
+			string s = DecodeString.DecodeStrings("3[a]2[bc]");
+
+			
 			Console.ReadLine();
 		}
 	}
