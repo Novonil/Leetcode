@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using static Leetcode.Arrays.KadanesIn2D;
+using MaximalRectangle = Leetcode.Stacks.MaximalRectangle;
 
 namespace Leetcode
 {
@@ -202,8 +203,16 @@ namespace Leetcode
 			//Console.WriteLine(ob.Next(75));
 			//Console.WriteLine(ob.Next(85));
 
-			bool s = ValidateStackSequences.ValidateStackSequence(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 3, 2, 1 });
+			//bool s = ValidateStackSequences.ValidateStackSequence(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 3, 2, 1 });
+			int[][] mat = new int[4][];
+			
+			mat[0] = new int[] { 1,0,1,0,0 };
+			mat[1] = new int[] { 1,0,1,1,1 };
+			mat[2] = new int[] { 1,1,1,1,1 };
+			mat[3] = new int[] { 1,0,0,1,0 };
 
+			MaximalRectangle mr = new MaximalRectangle();
+			int s = mr.MaximalRectangleArea(mat);
 			Console.WriteLine(s);
 			Console.ReadLine();
 		}
