@@ -6,7 +6,7 @@ namespace Leetcode.Stacks
 {
 	class SimplifyPath
 	{
-        public string SimplifyPath(string path)
+        public string SimplifyPaths(string path)
         {
             string[] splitPath = path.Split("/", StringSplitOptions.RemoveEmptyEntries);
             Stack<string> stack = new Stack<string>();
