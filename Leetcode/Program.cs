@@ -147,28 +147,45 @@ namespace Leetcode
 			//BackspaceStringCompare ob = new BackspaceStringCompare();
 			//bool res = Leetcode.Stacks.ValidParenthesis.IsValid("()");
 
-			Leetcode.Stacks.MinStack ms = new Leetcode.Stacks.MinStack();
-			ms.Push(2147483646);
-			ms.Push(2147483646);
-			ms.Push(2147483647);
-			Console.WriteLine(ms.Top());
-			ms.Pop();
-			Console.WriteLine(ms.GetMin());
-			ms.Pop();
-			Console.WriteLine(ms.GetMin());
-			ms.Pop();
-			ms.Push(2147483647);
-			Console.WriteLine(ms.Top());
-			Console.WriteLine(ms.GetMin());
-			ms.Push(-2147483648);
-			Console.WriteLine(ms.Top());
-			Console.WriteLine(ms.GetMin());
-			ms.Pop();
-			Console.WriteLine(ms.GetMin());
+			//Leetcode.Stacks.MinStack ms = new Leetcode.Stacks.MinStack();
+			//ms.Push(2147483646);
+			//ms.Push(2147483646);
+			//ms.Push(2147483647);
+			//Console.WriteLine(ms.Top());
+			//ms.Pop();
+			//Console.WriteLine(ms.GetMin());
+			//ms.Pop();
+			//Console.WriteLine(ms.GetMin());
+			//ms.Pop();
+			//ms.Push(2147483647);
+			//Console.WriteLine(ms.Top());
+			//Console.WriteLine(ms.GetMin());
+			//ms.Push(-2147483648);
+			//Console.WriteLine(ms.Top());
+			//Console.WriteLine(ms.GetMin());
+			//ms.Pop();
+			//Console.WriteLine(ms.GetMin());
 
 			//Console.WriteLine(res);
 			//foreach (int i in res)
 			//	Console.WriteLine(i);
+
+			//DesignAStackWIthIncrementOperation d = new DesignAStackWIthIncrementOperation(3);
+			//d.Push(1);
+			//d.Push(2);
+			//Console.WriteLine(d.Pop());
+			//d.Push(2);
+			//d.Push(3);
+			//d.Push(4);
+			//d.Increment(5,100);
+			//d.Increment(2,100);
+			//Console.WriteLine(d.Pop());
+			//Console.WriteLine(d.Pop());
+			//Console.WriteLine(d.Pop());
+			//Console.WriteLine(d.Pop());
+
+			string str = "0";
+			Console.WriteLine(str[0] - '1');
 			Console.ReadLine();
 		}
 	}
