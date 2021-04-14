@@ -202,9 +202,9 @@ namespace Leetcode
 			//Console.WriteLine(ob.Next(75));
 			//Console.WriteLine(ob.Next(85));
 
-			string s = DecodeString.DecodeStrings("3[a]2[bc]");
+			bool s = ValidateStackSequences.ValidateStackSequence(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 3, 2, 1 });
 
-			
+			Console.WriteLine(s);
 			Console.ReadLine();
 		}
 	}
