@@ -204,16 +204,29 @@ namespace Leetcode
 			//Console.WriteLine(ob.Next(85));
 
 			//bool s = ValidateStackSequences.ValidateStackSequence(new int[] { 1, 2, 3, 4, 5 }, new int[] { 4, 5, 3, 2, 1 });
-			int[][] mat = new int[4][];
-			
-			mat[0] = new int[] { 1,0,1,0,0 };
-			mat[1] = new int[] { 1,0,1,1,1 };
-			mat[2] = new int[] { 1,1,1,1,1 };
-			mat[3] = new int[] { 1,0,0,1,0 };
 
-			MaximalRectangle mr = new MaximalRectangle();
-			int s = mr.MaximalRectangleArea(mat);
+			//Stack<(char, int)> stack = new Stack<(char, int)>();
+			//stack.Push(('a',2));
+			//stack.Push(('a', 3));
+			//stack.Push(('b', 4));
+			//int count = stack.Sum(x => x.Item2);
+
+
+			//int[][] mat = new int[4][];
+
+			//mat[0] = new int[] { 1,0,1,0,0 };
+			//mat[1] = new int[] { 1,0,1,1,1 };
+			//mat[2] = new int[] { 1,1,1,1,1 };
+			//mat[3] = new int[] { 1,0,0,1,0 };
+
+
+
+			//MaximalRectangle mr = new MaximalRectangle();
+			//int s = mr.MaximalRectangleArea(mat);
+
+			string s = RemoveAllAdjacentDuplicatesInStringII.RemoveDuplicates("deeedbbcccbdaa", 3);
 			Console.WriteLine(s);
+			
 			Console.ReadLine();
 		}
 	}
