@@ -224,8 +224,17 @@ namespace Leetcode
 			//MaximalRectangle mr = new MaximalRectangle();
 			//int s = mr.MaximalRectangleArea(mat);
 
-			string s = RemoveAllAdjacentDuplicatesInStringII.RemoveDuplicates("deeedbbcccbdaa", 3);
-			Console.WriteLine(s);
+			//string s = RemoveAllAdjacentDuplicatesInStringII.RemoveDuplicates("deeedbbcccbdaa", 3);
+			IList<string> inp = new List<string>();
+			inp.Add("0:start:0");
+			inp.Add("1:start:2");
+			inp.Add("1:end:5");
+			inp.Add("0:end:6");
+
+
+			int[] res = EclusiveTimeOfFunctions.ExclusiveTime(2, inp);
+
+			Console.WriteLine("");
 			
 			Console.ReadLine();
 		}
