@@ -1,5 +1,6 @@
 ﻿using Leetcode.Arrays;
 using Leetcode.Binary_Search;
+using Leetcode.Dynamic_Programming;
 using Leetcode.Heaps;
 using Leetcode.SlidingWindow;
 using Leetcode.Stack;
@@ -9,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using static Leetcode.Arrays.KadanesIn2D;
+using static Leetcode.Dynamic_Programming.HouseRobberIII;
 using MaximalRectangle = Leetcode.Stacks.MaximalRectangle;
 
 namespace Leetcode
@@ -230,11 +232,16 @@ namespace Leetcode
 			inp.Add("1:start:2");
 			inp.Add("1:end:5");
 			inp.Add("0:end:6");
+			TreeNode tr = new TreeNode(3);
+			tr.left = new TreeNode(2);
+			tr.right = new TreeNode(3);
+			tr.left.right = new TreeNode(3);
+			tr.right.right = new TreeNode(1);
 
+			int[] nums = { 2, 3, 2 };
+			int res = HouseRobberIII.Rob(tr);
 
-			int[] res = EclusiveTimeOfFunctions.ExclusiveTime(2, inp);
-
-			Console.WriteLine("");
+			Console.WriteLine(res);
 			
 			Console.ReadLine();
 		}

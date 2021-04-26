@@ -21,8 +21,8 @@ namespace Leetcode.Dynamic_Programming
 
         }
 
-        int[] dp;
-        public int Robbed(int[] nums)
+        static int[] dp;
+        public static int Robbed(int[] nums)
         {
             int len = nums.Length - 1;
             dp = new int[len + 1];
@@ -30,7 +30,7 @@ namespace Leetcode.Dynamic_Programming
             return Robbed(nums, len);
         }
 
-        public int Robbed(int[] nums, int i)
+        public static int Robbed(int[] nums, int i)
         {
             if (i < 0)
                 return 0;
@@ -40,11 +40,11 @@ namespace Leetcode.Dynamic_Programming
                 return dp[i];
             }
 
-            dp[i] = Math.Max(Rob(nums, i - 2) + nums[i], Rob(nums, i - 1));
+            dp[i] = Math.Max(Robbed(nums, i - 2) + nums[i], Robbed(nums, i - 1));
             return dp[i];
         }
 
-        public int Robs(int[] nums)
+        public static int Robs(int[] nums)
         {
             int len = nums.Length;
             int[] dp = new int[len + 1];
@@ -59,7 +59,7 @@ namespace Leetcode.Dynamic_Programming
             return dp[len];
         }
 
-        public int Robbes(int[] nums)
+        public static int Robbes(int[] nums)
         {
             int prev1 = 0;
             int prev2 = 0;
