@@ -11,7 +11,7 @@ namespace Leetcode.DFS
         {
             int[] parent;
             int[] rank;
-            int count = 0;
+            int count;
             public UnionFind(char[][] grid)
             {
                 count = 0;
@@ -38,7 +38,7 @@ namespace Leetcode.DFS
             public int find(int pos)
             {
                 if (parent[pos] != pos)
-                    find(parent[pos]);
+                    parent[pos] = find(parent[pos]);
                 return parent[pos];
             }
 
