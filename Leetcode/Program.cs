@@ -1,5 +1,6 @@
 ﻿using Leetcode.Arrays;
 using Leetcode.Binary_Search;
+using Leetcode.DFS;
 using Leetcode.Dynamic_Programming;
 using Leetcode.Heaps;
 using Leetcode.SlidingWindow;
@@ -238,8 +239,18 @@ namespace Leetcode
 			tr.left.right = new TreeNode(3);
 			tr.right.right = new TreeNode(1);
 
-			int[] nums = { 2, 3, 2 };
-			int res = HouseRobberIII.Rob(tr);
+			char[][] nums = new char[10][];
+			nums[0] = new char[] { '1','1','1','1','1','0','1','1','1','1'};
+			nums[1] = new char[] { '1','0','1','0','1','1','1','1','1','1'};
+			nums[2] = new char[] { '0','1','1','1','0','1','1','1','1','1'};
+			nums[3] = new char[] { '1','1','0','1','1','0','0','0','0','1'};
+			nums[4] = new char[] { '1','0','1','0','1','0','0','1','0','1'};
+			nums[5] = new char[] { '1','0','0','1','1','1','0','1','0','0'};
+			nums[6] = new char[] { '0','0','1','0','0','1','1','1','1','0'};
+			nums[7] = new char[] { '1','0','1','1','1','0','0','1','1','1'};
+			nums[8] = new char[] { '1','1','1','1','1','1','1','1','0','1'};
+			nums[9] = new char[] { '1','0','1','1','1','1','1','1','1','0'};
+			int res = NumberOfIslandUnionFind.NumIslands(nums);
 
 			Console.WriteLine(res);
 			
