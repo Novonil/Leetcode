@@ -239,13 +239,16 @@ namespace Leetcode
 			tr.right = new TreeNode(3);
 			tr.left.right = new TreeNode(3);
 			tr.right.right = new TreeNode(1);
-
-			int[][] nums = new int[4][];
-			nums[0] = new int[] {1,1,0,0,0};
-			nums[1] = new int[] {1,1,0,0,0};
-			nums[2] = new int[] {0,0,0,1,1};
-			nums[3] = new int[] {0,0,0,1,1};
-
+			
+			int[][] nums = new int[8][];
+			nums[0] = new int[] { 0, 1, 1, 1, 1, 1, 1, 1 };
+			nums[1] = new int[] { 1, 0, 1, 0, 0, 0, 0, 1 };
+			nums[2] = new int[] { 1, 0, 0, 0, 0, 1, 0, 1 };
+			nums[3] = new int[] { 0, 1, 0, 0, 0, 1, 0, 1 };
+			nums[4] = new int[] { 1, 0, 0, 1, 0, 1, 0, 1 };
+			nums[5] = new int[] { 1, 1, 1, 1, 0, 0, 1, 1 };
+			nums[6] = new int[] { 1, 0, 0, 0, 0, 0, 1, 1 };
+			nums[7] = new int[] { 0, 1, 1, 1, 1, 1, 1, 1 };
 			//[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
 
 			char[][] pos = new char[3][];
@@ -275,7 +278,7 @@ namespace Leetcode
 			//sb.Append()
 			//Console.WriteLine(res);
 
-			Leetcode.BFS.MaxAreaOfIslandcs.MaxAreaOfIsland(nums);
+			Leetcode.BFS.NumberOfClosedIslands.ClosedIsland(nums);
 			Console.ReadLine();
 		}
 	}
