@@ -6,97 +6,107 @@ namespace Leetcode.DFS
 {
 	class NumberOfIslandsII
 	{
-        bool[][] visited;
-        public int NumIslands(char[][] grid)
+        public class Solution
         {
-            if (grid == null || grid.Length == 0)
-                return 0;
-
-            int rows = grid.Length;
-            int cols = grid[0].Length;
-            visited = new bool[rows][];
-            int count = 0;
-
-            for (int i = 0; i < rows; i++)
+            public class UnionFind
             {
-                visited[i] = new bool[cols];
-            }
+                public int[] parent;
+                public int[] rank;
 
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < cols; j++)
+                public UnionFind(int m, int n)
                 {
-                    if (grid[i][j] == '1' && !visited[i][j])
+                    parent = new int[m * n];
+                    rank = new int[m * n];
+                    Array.Fill(parent, -1);
+                }
+
+                public int Find(int pos)
+                {
+                    if (parent[pos] != pos)
+                        parent[pos] = Find(parent[pos]);
+                    return parent[pos];
+                }
+
+                public int Union(int pos1, int pos2, int numOfIslands)
+                {
+                    int root1 = Find(pos1);
+                    int root2 = Find(pos2);
+
+                    if (root1 != root2)
                     {
-                        count += dfs(grid, i, j);
+                        if (rank[root1] > rank[root2])
+                            parent[root2] = root1;
+                        else if (rank[root1] < rank[root2])
+                            parent[root1] = root2;
+                        else
+                        {
+                            parent[root2] = root1;
+                            rank[root1] += 1;
+                        }
+                        numOfIslands--;
                     }
+                    return numOfIslands;
                 }
             }
-            return count;
-        }
 
-        public int dfs(char[][] grid, int i, int j)
-        {
-            if (!isValid(grid, i, j) || visited[i][j] || grid[i][j] == '0')
-                return 0;
-
-            visited[i][j] = true;
-
-            dfs(grid, i + 1, j);
-            dfs(grid, i - 1, j);
-            dfs(grid, i, j + 1);
-            dfs(grid, i, j - 1);
-
-            return 1;
-        }
-
-        public bool isValid(char[][] grid, int i, int j)
-        {
-            if (i < 0 || i >= grid.Length || j < 0 || j >= grid[0].Length)
-                return false;
-            return true;
-        }
-
-        public int NumOfIslands(char[][] grid)
-        {
-            int count = 0;
-            if (grid == null || grid.Length == 0)
-                return 0;
-
-            for (int i = 0; i < grid.Length; i++)
+            public static IList<int> NumIslands2(int m, int n, int[][] positions)
             {
-                for (int j = 0; j < grid[0].Length; j++)
+                IList<int> numberOfIslands = new List<int>();
+                int numOfIslands = 0;
+
+                //int[][] grid = new int[m][];
+                //for(int i = 0; i<m; i++)
+                //{
+                //    grid[i] = new int[n];
+                //}
+
+                UnionFind uf = new UnionFind(m, n);
+
+                foreach (int[] position in positions)
                 {
-                    if (grid[i][j] == '1')
+                    int row = position[0];
+                    int col = position[1];
+
+                    //grid[row][col] = 1;
+
+                    int currentIndex = row * n + col;
+
+                    if (uf.parent[currentIndex] == -1)
                     {
-                        count += dfss(grid, i, j);
+                        numOfIslands++;
+                        uf.parent[currentIndex] = currentIndex;
                     }
+                    else
+                    {
+                        numberOfIslands.Add(numOfIslands);
+                        continue;
+                    }
+
+                    int neighbourIndex = (row - 1) * n + col;
+                    if (row - 1 >= 0 && uf.parent[neighbourIndex] != -1)
+                    {
+                        numOfIslands = uf.Union(currentIndex, neighbourIndex, numOfIslands);
+                    }
+                    neighbourIndex = (row + 1) * n + col;
+                    if (row + 1 < m && uf.parent[neighbourIndex] != -1)
+                    {
+                        numOfIslands = uf.Union(currentIndex, neighbourIndex, numOfIslands);
+                    }
+                    neighbourIndex = row * n + col - 1;
+                    if (col - 1 >= 0 && uf.parent[neighbourIndex] != -1)
+                    {
+                        numOfIslands = uf.Union(currentIndex, neighbourIndex, numOfIslands);
+                    }
+                    neighbourIndex = row * n + col + 1;
+                    if (col + 1 < n && uf.parent[neighbourIndex] != -1)
+                    {
+                        numOfIslands = uf.Union(currentIndex, neighbourIndex, numOfIslands);
+                    }
+
+                    numberOfIslands.Add(numOfIslands);
                 }
+                return numberOfIslands;
             }
-            return count;
-        }
-
-        public int dfss(char[][] grid, int i, int j)
-        {
-            if (!isValids(grid, i, j) || grid[i][j] == '0')
-                return 0;
-
-            grid[i][j] = '0';
-
-            dfss(grid, i + 1, j);
-            dfss(grid, i - 1, j);
-            dfss(grid, i, j + 1);
-            dfss(grid, i, j - 1);
-
-            return 1;
-        }
-
-        public bool isValids(char[][] grid, int i, int j)
-        {
-            if (i < 0 || i >= grid.Length || j < 0 || j >= grid[0].Length)
-                return false;
-
-            return true;
         }
     }
 }

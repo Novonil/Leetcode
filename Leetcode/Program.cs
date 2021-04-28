@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using static Leetcode.Arrays.KadanesIn2D;
+using static Leetcode.DFS.NumberOfIslandsII;
 using static Leetcode.Dynamic_Programming.HouseRobberIII;
 using MaximalRectangle = Leetcode.Stacks.MaximalRectangle;
 
@@ -239,21 +240,41 @@ namespace Leetcode
 			tr.left.right = new TreeNode(3);
 			tr.right.right = new TreeNode(1);
 
-			char[][] nums = new char[10][];
-			nums[0] = new char[] { '1','1','1','1','1','0','1','1','1','1'};
-			nums[1] = new char[] { '1','0','1','0','1','1','1','1','1','1'};
-			nums[2] = new char[] { '0','1','1','1','0','1','1','1','1','1'};
-			nums[3] = new char[] { '1','1','0','1','1','0','0','0','0','1'};
-			nums[4] = new char[] { '1','0','1','0','1','0','0','1','0','1'};
-			nums[5] = new char[] { '1','0','0','1','1','1','0','1','0','0'};
-			nums[6] = new char[] { '0','0','1','0','0','1','1','1','1','0'};
-			nums[7] = new char[] { '1','0','1','1','1','0','0','1','1','1'};
-			nums[8] = new char[] { '1','1','1','1','1','1','1','1','0','1'};
-			nums[9] = new char[] { '1','0','1','1','1','1','1','1','1','0'};
-			int res = NumberOfIslandUnionFind.NumIslands(nums);
+			char[][] nums = new char[4][];
+			nums[0] = new char[] {'1','1','1','1','0'};
+			nums[1] = new char[] {'1','1','0','1','0'};
+			nums[2] = new char[] {'1','1','0','0','0'};
+			nums[3] = new char[] {'0','0','0','0','0'};
 
-			Console.WriteLine(res);
-			
+			//[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
+
+			char[][] pos = new char[3][];
+			pos[0] = new char[] { 'O', 'O', 'O' };
+			pos[1] = new char[] { 'O', 'O', 'O' };
+			pos[2] = new char[] { 'O', 'O', 'O' };
+			//pos[2] = new int[] { 1, 2 };
+			//pos[3] = new int[] { 2, 1 };
+
+			//pos[4] = new int[] { 0, 2 };
+			//pos[5] = new int[] { 0, 0 };
+			//pos[6] = new int[] { 1, 1 };
+
+			//nums[0] = new char[] { '1','1','1','1','1','0','1','1','1','1'};
+			//nums[1] = new char[] { '1','0','1','0','1','1','1','1','1','1'};
+			//nums[2] = new char[] { '0','1','1','1','0','1','1','1','1','1'};
+			//nums[3] = new char[] { '1','1','0','1','1','0','0','0','0','1'};
+			//nums[4] = new char[] { '1','0','1','0','1','0','0','1','0','1'};
+			//nums[5] = new char[] { '1','0','0','1','1','1','0','1','0','0'};
+			//nums[6] = new char[] { '0','0','1','0','0','1','1','1','1','0'};
+			//nums[7] = new char[] { '1','0','1','1','1','0','0','1','1','1'};
+			//nums[8] = new char[] { '1','1','1','1','1','1','1','1','0','1'};
+			//nums[9] = new char[] { '1','0','1','1','1','1','1','1','1','0'};
+			//IList<int> res = Solution.NumIslands2(3,3,pos);
+			//Leetcode.BFS.SuroundedRegions.Solve(pos);
+			//StringBuilder sb = new StringBuilder();
+			//sb.Append()
+			//Console.WriteLine(res);
+			DecodeStrings.DecodeString("3[a]2[bc]");
 			Console.ReadLine();
 		}
 	}
