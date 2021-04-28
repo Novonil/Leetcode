@@ -240,11 +240,11 @@ namespace Leetcode
 			tr.left.right = new TreeNode(3);
 			tr.right.right = new TreeNode(1);
 
-			char[][] nums = new char[4][];
-			nums[0] = new char[] {'1','1','1','1','0'};
-			nums[1] = new char[] {'1','1','0','1','0'};
-			nums[2] = new char[] {'1','1','0','0','0'};
-			nums[3] = new char[] {'0','0','0','0','0'};
+			int[][] nums = new int[4][];
+			nums[0] = new int[] {1,1,0,0,0};
+			nums[1] = new int[] {1,1,0,0,0};
+			nums[2] = new int[] {0,0,0,1,1};
+			nums[3] = new int[] {0,0,0,1,1};
 
 			//[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
 
@@ -274,7 +274,8 @@ namespace Leetcode
 			//StringBuilder sb = new StringBuilder();
 			//sb.Append()
 			//Console.WriteLine(res);
-			DecodeStrings.DecodeString("3[a]2[bc]");
+
+			Leetcode.BFS.MaxAreaOfIslandcs.MaxAreaOfIsland(nums);
 			Console.ReadLine();
 		}
 	}
