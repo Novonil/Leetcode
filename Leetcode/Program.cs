@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using static Leetcode.Arrays.KadanesIn2D;
+using static Leetcode.DFS.EmployeeImportance;
 using static Leetcode.DFS.NumberOfIslandsII;
 using static Leetcode.Dynamic_Programming.HouseRobberIII;
 using MaximalRectangle = Leetcode.Stacks.MaximalRectangle;
@@ -278,7 +279,33 @@ namespace Leetcode
 			//sb.Append()
 			//Console.WriteLine(res);
 
-			Leetcode.BFS.NumberOfClosedIslands.ClosedIsland(nums);
+			//Leetcode.BFS.NumberOfClosedIslands.ClosedIsland(nums);
+
+			Employee e = new Employee();
+			e.id = 1;
+			e.importance = 5;
+			e.subordinates = new List<int>();
+			e.subordinates.Add(2);
+			e.subordinates.Add(3);
+
+			Employee e1 = new Employee();
+			e1.id = 2;
+			e1.importance = 3;
+			e1.subordinates = new List<int>();
+
+			Employee e2 = new Employee();
+			e2.id = 3;
+			e2.importance = 3;
+			e2.subordinates = new List<int>();
+
+			IList<Employee> emp = new List<Employee>();
+
+			emp.Add(e);
+			emp.Add(e1);
+			emp.Add(e2);
+
+			EmployeeImportance.GetImportance(emp, 1);
+
 			Console.ReadLine();
 		}
 	}
