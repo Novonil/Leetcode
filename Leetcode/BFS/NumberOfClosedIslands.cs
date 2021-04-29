@@ -13,7 +13,6 @@ namespace Leetcode.BFS
 
             int rows = grid.Length;
             int cols = grid[0].Length;
-
             int numOfIslands = 0;
 
             for (int i = 1; i < rows - 1; i++)
@@ -22,60 +21,83 @@ namespace Leetcode.BFS
                 {
                     if (grid[i][j] == 0)
                     {
-                        numOfIslands += bfs(grid, i, j, rows, cols);
+                        numOfIslands += bfs(grid, i, j);
                     }
                 }
             }
             return numOfIslands;
         }
 
-        public static int bfs(int[][] grid, int i, int j, int rows, int cols)
+        public static int bfs(int[][] grid, int i, int j)
         {
             Queue<(int, int)> queue = new Queue<(int, int)>();
             queue.Enqueue((i, j));
-            grid[i][j] = 1;
-
+            bool validIsland = true;
             while (queue.Count > 0)
             {
                 int row = queue.Peek().Item1;
                 int col = queue.Peek().Item2;
-
                 queue.Dequeue();
 
+                grid[row][col] = 1;
 
-                if (row - 1 == 0 && grid[row - 1][col] == 0)
-                    return 0;
-                else if (row - 1 > 0 && grid[row - 1][col] == 0)
+                if (notClosedIsland(grid, row, col))
+                    validIsland = false;
+
+                if (isValid(grid, row - 1, col) && grid[row - 1][col] == 0)
                 {
                     queue.Enqueue((row - 1, col));
                     grid[row - 1][col] = 1;
                 }
-
-                if (row + 1 == rows - 1 && grid[row + 1][col] == 0)
-                    return 0;
-                else if (row + 1 < rows - 1 && grid[row + 1][col] == 0)
+                if (isValid(grid, row + 1, col) && grid[row + 1][col] == 0)
                 {
-                    queue.Enqueue((row + 1, j));
+                    queue.Enqueue((row + 1, col));
                     grid[row + 1][col] = 1;
                 }
-
-                if (col - 1 == 0 && grid[row][col - 1] == 0)
-                    return 0;
-                else if (col - 1 > 0 && grid[row][col - 1] == 0)
+                if (isValid(grid, row, col - 1) && grid[row][col - 1] == 0)
                 {
                     queue.Enqueue((row, col - 1));
                     grid[row][col - 1] = 1;
                 }
-
-                if (col + 1 == cols - 1 && grid[row][col + 1] == 0)
-                    return 0;
-                else if (col + 1 < cols - 1 && grid[row][col + 1] == 0)
+                if (isValid(grid, row, col + 1) && grid[row][col + 1] == 0)
                 {
                     queue.Enqueue((row, col + 1));
                     grid[row][col + 1] = 1;
                 }
             }
-            return 1;
+            if (validIsland)
+                return 1;
+            else
+                return 0;
+        }
+        public static bool notClosedIsland(int[][] grid, int row, int col)
+        {
+            if (isBoundary(grid, row - 1, col) && grid[row - 1][col] == 0)
+                return true;
+
+            if (isBoundary(grid, row + 1, col) && grid[row + 1][col] == 0)
+                return true;
+
+            if (isBoundary(grid, row, col - 1) && grid[row][col - 1] == 0)
+                return true;
+
+            if (isBoundary(grid, row, col + 1) && grid[row][col + 1] == 0)
+                return true;
+
+            return false;
+        }
+
+        public static bool isBoundary(int[][] grid, int i, int j)
+        {
+            if (i == 0 || i == grid.Length - 1 || j == 0 || j == grid[0].Length - 1)
+                return true;
+            return false;
+        }
+        public static bool isValid(int[][] grid, int i, int j)
+        {
+            if (i > 0 && i < grid.Length - 1 && j > 0 && j < grid[0].Length - 1)
+                return true;
+            return false;
         }
 
     }

@@ -241,15 +241,18 @@ namespace Leetcode
 			tr.left.right = new TreeNode(3);
 			tr.right.right = new TreeNode(1);
 			
-			int[][] nums = new int[8][];
-			nums[0] = new int[] { 0, 1, 1, 1, 1, 1, 1, 1 };
-			nums[1] = new int[] { 1, 0, 1, 0, 0, 0, 0, 1 };
-			nums[2] = new int[] { 1, 0, 0, 0, 0, 1, 0, 1 };
-			nums[3] = new int[] { 0, 1, 0, 0, 0, 1, 0, 1 };
-			nums[4] = new int[] { 1, 0, 0, 1, 0, 1, 0, 1 };
-			nums[5] = new int[] { 1, 1, 1, 1, 0, 0, 1, 1 };
-			nums[6] = new int[] { 1, 0, 0, 0, 0, 0, 1, 1 };
-			nums[7] = new int[] { 0, 1, 1, 1, 1, 1, 1, 1 };
+			int[][] nums = new int[10][];
+			nums[0] = new int[] { 0, 0, 1, 1, 0, 1, 0, 0, 1, 0 };
+			nums[1] = new int[] { 1,1,0,1,1,0,1,1,1,0 };
+			nums[2] = new int[] { 1,0,1,1,1,0,0,1,1,0 };
+			nums[3] = new int[] { 0,1,1,0,0,0,0,1,0,1 };
+			nums[4] = new int[] { 0,0,0,0,0,0,1,1,1,0 };
+			nums[5] = new int[] { 0,1,0,1,0,1,0,1,1,1 };
+			nums[6] = new int[] { 1,0,1,0,1,1,0,0,0,1 };
+			nums[7] = new int[] { 1,1,1,1,1,1,0,0,0,0 };
+			nums[8] = new int[] { 1,1,1,0,0,1,0,1,0,1 };
+			nums[9] = new int[] { 1,1,1,0,1,1,0,1,1,0 };
+
 			//[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
 
 			char[][] pos = new char[3][];
@@ -281,31 +284,32 @@ namespace Leetcode
 
 			//Leetcode.BFS.NumberOfClosedIslands.ClosedIsland(nums);
 
-			Employee e = new Employee();
-			e.id = 1;
-			e.importance = 5;
-			e.subordinates = new List<int>();
-			e.subordinates.Add(2);
-			e.subordinates.Add(3);
+			//Employee e = new Employee();
+			//e.id = 1;
+			//e.importance = 5;
+			//e.subordinates = new List<int>();
+			//e.subordinates.Add(2);
+			//e.subordinates.Add(3);
 
-			Employee e1 = new Employee();
-			e1.id = 2;
-			e1.importance = 3;
-			e1.subordinates = new List<int>();
+			//Employee e1 = new Employee();
+			//e1.id = 2;
+			//e1.importance = 3;
+			//e1.subordinates = new List<int>();
 
-			Employee e2 = new Employee();
-			e2.id = 3;
-			e2.importance = 3;
-			e2.subordinates = new List<int>();
+			//Employee e2 = new Employee();
+			//e2.id = 3;
+			//e2.importance = 3;
+			//e2.subordinates = new List<int>();
 
-			IList<Employee> emp = new List<Employee>();
+			//IList<Employee> emp = new List<Employee>();
 
-			emp.Add(e);
-			emp.Add(e1);
-			emp.Add(e2);
+			//emp.Add(e);
+			//emp.Add(e1);
+			//emp.Add(e2);
 
-			EmployeeImportance.GetImportance(emp, 1);
-
+			//EmployeeImportance.GetImportance(emp, 1);
+			int n = TimeNeededToInformAllEmployees.NumOfMinutes(15, 0, new int[] { -1, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 }, new int[] { 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 });
+			Console.WriteLine(n);
 			Console.ReadLine();
 		}
 	}
