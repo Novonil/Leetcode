@@ -15,6 +15,7 @@ using static Leetcode.DFS.EmployeeImportance;
 using static Leetcode.DFS.NumberOfIslandsII;
 using static Leetcode.Dynamic_Programming.HouseRobberIII;
 using MaximalRectangle = Leetcode.Stacks.MaximalRectangle;
+using Leetcode.Segment_Tree;
 
 namespace Leetcode
 {
@@ -308,8 +309,57 @@ namespace Leetcode
 			//emp.Add(e2);
 
 			//EmployeeImportance.GetImportance(emp, 1);
-			int n = TimeNeededToInformAllEmployees.NumOfMinutes(15, 0, new int[] { -1, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 }, new int[] { 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 });
-			Console.WriteLine(n);
+			//int n = TimeNeededToInformAllEmployees.NumOfMinutes(15, 0, new int[] { -1, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6 }, new int[] { 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0 });
+
+			//Leetcode.DFS.DeleteNodesAndReturnForest.TreeNode root = new Leetcode.DFS.DeleteNodesAndReturnForest.TreeNode(1);
+			//root.left = new DeleteNodesAndReturnForest.TreeNode(2);
+			//root.right = new DeleteNodesAndReturnForest.TreeNode(3);
+			//root.left.left = new DeleteNodesAndReturnForest.TreeNode(4);
+			//root.left.right = new DeleteNodesAndReturnForest.TreeNode(5);
+			//root.right.left = new DeleteNodesAndReturnForest.TreeNode(6);
+			//root.right.right = new DeleteNodesAndReturnForest.TreeNode(7);
+
+			//DeleteNodesAndReturnForest.DelNodes(root, new int[] { 3,5 });
+			//Console.WriteLine(n);
+
+			//int[] arr = { -1, 2, 4, 0 };
+			//int len = arr.Length;
+			//int[] segmentTree = new int[2 * len - 1];
+			//Implementation.buildSegmentTreeFromArray(arr, segmentTree, 0, len - 1, 0);
+			//foreach (int i in segmentTree)
+			//	Console.WriteLine(i);
+
+			//int min = Implementation.minInRange(segmentTree, 0, 3, 0, 3, 0);
+			//Console.WriteLine(min);
+
+
+			IList<IList<string>> accounts = new List<IList<string>>();
+			IList<string> account = new List<string>();
+
+			account.Add("John");
+			account.Add("johnsmith@mail.com");
+			account.Add("john_newyork@mail.com");
+			accounts.Add(account);
+
+			IList<string> account1 = new List<string>();
+			account1.Add("John");
+			account1.Add("johnsmith@mail.com");
+			account1.Add("john00@mail.com");
+			accounts.Add(account1);
+
+			IList<string> account3 = new List<string>();
+			account3.Add("Mary");
+			account3.Add("mary@mail.com");
+			accounts.Add(account3);
+
+			IList<string> account2 = new List<string>();
+			account2.Add("John");
+			account2.Add("johnnybravo@mail.com");
+			accounts.Add(account2);
+
+			IList<IList<string>> res = AccountsMerge.AccountsMerges(accounts);
+
+
 			Console.ReadLine();
 		}
 	}
