@@ -333,31 +333,38 @@ namespace Leetcode
 			//Console.WriteLine(min);
 
 
-			IList<IList<string>> accounts = new List<IList<string>>();
-			IList<string> account = new List<string>();
+			//IList<IList<string>> accounts = new List<IList<string>>();
+			//IList<string> account = new List<string>();
 
-			account.Add("John");
-			account.Add("johnsmith@mail.com");
-			account.Add("john_newyork@mail.com");
-			accounts.Add(account);
+			//account.Add("John");
+			//account.Add("johnsmith@mail.com");
+			//account.Add("john_newyork@mail.com");
+			//accounts.Add(account);
 
-			IList<string> account1 = new List<string>();
-			account1.Add("John");
-			account1.Add("johnsmith@mail.com");
-			account1.Add("john00@mail.com");
-			accounts.Add(account1);
+			//IList<string> account1 = new List<string>();
+			//account1.Add("John");
+			//account1.Add("johnsmith@mail.com");
+			//account1.Add("john00@mail.com");
+			//accounts.Add(account1);
 
-			IList<string> account3 = new List<string>();
-			account3.Add("Mary");
-			account3.Add("mary@mail.com");
-			accounts.Add(account3);
+			//IList<string> account3 = new List<string>();
+			//account3.Add("Mary");
+			//account3.Add("mary@mail.com");
+			//accounts.Add(account3);
 
-			IList<string> account2 = new List<string>();
-			account2.Add("John");
-			account2.Add("johnnybravo@mail.com");
-			accounts.Add(account2);
+			//IList<string> account2 = new List<string>();
+			//account2.Add("John");
+			//account2.Add("johnnybravo@mail.com");
+			//accounts.Add(account2);
 
-			IList<IList<string>> res = AccountsMerge.AccountsMerges(accounts);
+			//IList<IList<string>> res = AccountsMerge.AccountsMerges(accounts);
+
+			int[][] matrix = new int[3][];
+			matrix[0] = new int[] { 1,2,3,4 };
+			matrix[1] = new int[] { 5, 6,7,8 };
+			matrix[2] = new int[] { 10, 11, 12, 13 };
+
+			IList<int> result = SpiralMatrix.SpiralOrder(matrix);
 
 
 			Console.ReadLine();
