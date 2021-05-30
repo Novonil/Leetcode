@@ -366,9 +366,14 @@ namespace Leetcode
 
 			//IList<int> result = SpiralMatrix.SpiralOrder(matrix);
 			//Class1.countKDistinctSubstrings("aaaaaaa",1);
-			int[] arr = { 1,0,1,1,1 };
+			//int[][] matrix = new int[3][];
+			//matrix[0] = new int[] { 1,3,5,7 };
+			//matrix[1] = new int[] { 10,11,16,20 };
+			//matrix[2] = new int[] { 23,30,34,60 };
 			//bool index = SearchInARotatedSortedArrayI.Search(arr, 0);
 			//Console.WriteLine(index);
+			int[] nums = { 4,5,6,7,0,1,2 };
+			int x = FindMinimumInRotatedSortedArray.FindMin(nums);
 			Console.ReadLine();
 		}
 	}
