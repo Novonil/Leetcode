@@ -61,7 +61,7 @@ namespace Leetcode
 
 			//int res = MinimumNumberOfKConsecutiveBitFlips.MinKBitFlips(num, 3);
 
-			int[] num = { 4, 5, 8, 2 };
+			//int[] num = { 4, 5, 8, 2 };
 			//int res = LastStoneWeight.lastStoneWeight(num);
 
 
@@ -231,35 +231,35 @@ namespace Leetcode
 			//int s = mr.MaximalRectangleArea(mat);
 
 			//string s = RemoveAllAdjacentDuplicatesInStringII.RemoveDuplicates("deeedbbcccbdaa", 3);
-			IList<string> inp = new List<string>();
-			inp.Add("0:start:0");
-			inp.Add("1:start:2");
-			inp.Add("1:end:5");
-			inp.Add("0:end:6");
-			TreeNode tr = new TreeNode(3);
-			tr.left = new TreeNode(2);
-			tr.right = new TreeNode(3);
-			tr.left.right = new TreeNode(3);
-			tr.right.right = new TreeNode(1);
-			
-			int[][] nums = new int[10][];
-			nums[0] = new int[] { 0, 0, 1, 1, 0, 1, 0, 0, 1, 0 };
-			nums[1] = new int[] { 1,1,0,1,1,0,1,1,1,0 };
-			nums[2] = new int[] { 1,0,1,1,1,0,0,1,1,0 };
-			nums[3] = new int[] { 0,1,1,0,0,0,0,1,0,1 };
-			nums[4] = new int[] { 0,0,0,0,0,0,1,1,1,0 };
-			nums[5] = new int[] { 0,1,0,1,0,1,0,1,1,1 };
-			nums[6] = new int[] { 1,0,1,0,1,1,0,0,0,1 };
-			nums[7] = new int[] { 1,1,1,1,1,1,0,0,0,0 };
-			nums[8] = new int[] { 1,1,1,0,0,1,0,1,0,1 };
-			nums[9] = new int[] { 1,1,1,0,1,1,0,1,1,0 };
+			//IList<string> inp = new List<string>();
+			//inp.Add("0:start:0");
+			//inp.Add("1:start:2");
+			//inp.Add("1:end:5");
+			//inp.Add("0:end:6");
+			//TreeNode tr = new TreeNode(3);
+			//tr.left = new TreeNode(2);
+			//tr.right = new TreeNode(3);
+			//tr.left.right = new TreeNode(3);
+			//tr.right.right = new TreeNode(1);
 
-			//[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
+			//int[][] nums = new int[10][];
+			//nums[0] = new int[] { 0, 0, 1, 1, 0, 1, 0, 0, 1, 0 };
+			//nums[1] = new int[] { 1,1,0,1,1,0,1,1,1,0 };
+			//nums[2] = new int[] { 1,0,1,1,1,0,0,1,1,0 };
+			//nums[3] = new int[] { 0,1,1,0,0,0,0,1,0,1 };
+			//nums[4] = new int[] { 0,0,0,0,0,0,1,1,1,0 };
+			//nums[5] = new int[] { 0,1,0,1,0,1,0,1,1,1 };
+			//nums[6] = new int[] { 1,0,1,0,1,1,0,0,0,1 };
+			//nums[7] = new int[] { 1,1,1,1,1,1,0,0,0,0 };
+			//nums[8] = new int[] { 1,1,1,0,0,1,0,1,0,1 };
+			//nums[9] = new int[] { 1,1,1,0,1,1,0,1,1,0 };
 
-			char[][] pos = new char[3][];
-			pos[0] = new char[] { 'O', 'O', 'O' };
-			pos[1] = new char[] { 'O', 'O', 'O' };
-			pos[2] = new char[] { 'O', 'O', 'O' };
+			////[[0,1],[1,2],[2,1],[1,0],[0,2],[0,0],[1,1]]
+
+			//char[][] pos = new char[3][];
+			//pos[0] = new char[] { 'O', 'O', 'O' };
+			//pos[1] = new char[] { 'O', 'O', 'O' };
+			//pos[2] = new char[] { 'O', 'O', 'O' };
 			//pos[2] = new int[] { 1, 2 };
 			//pos[3] = new int[] { 2, 1 };
 
@@ -359,14 +359,16 @@ namespace Leetcode
 
 			//IList<IList<string>> res = AccountsMerge.AccountsMerges(accounts);
 
-			int[][] matrix = new int[3][];
-			matrix[0] = new int[] { 1,2,3,4 };
-			matrix[1] = new int[] { 5, 6,7,8 };
-			matrix[2] = new int[] { 10, 11, 12, 13 };
+			//int[][] matrix = new int[3][];
+			//matrix[0] = new int[] { 1,2,3,4 };
+			//matrix[1] = new int[] { 5, 6,7,8 };
+			//matrix[2] = new int[] { 10, 11, 12, 13 };
 
-			IList<int> result = SpiralMatrix.SpiralOrder(matrix);
-
-
+			//IList<int> result = SpiralMatrix.SpiralOrder(matrix);
+			//Class1.countKDistinctSubstrings("aaaaaaa",1);
+			int[] arr = { 1,0,1,1,1 };
+			//bool index = SearchInARotatedSortedArrayI.Search(arr, 0);
+			//Console.WriteLine(index);
 			Console.ReadLine();
 		}
 	}
