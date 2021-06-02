@@ -29,7 +29,6 @@ namespace Leetcode.Binary_Search
                 else
                     end -= 1;
             }
-
             return nums[start];
         }
     }
