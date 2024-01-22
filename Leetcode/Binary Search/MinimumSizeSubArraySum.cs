@@ -71,5 +71,50 @@ namespace Leetcode.Binary_Search
             }
             return minSize == int.MaxValue ? 0 : minSize;
         }
+
+        public int MinSubArrayLene(int target, int[] nums)
+        {
+            int ans = 0;
+            int len = nums.Length;
+            int[] prefix = new int[len];
+            List<int> deque = new List<int>();
+
+            prefix[0] = nums[0];
+
+            for (int i = 1; i < len; i++)
+                prefix[i] = prefix[i - 1] + nums[i];
+
+            for (int i = 0; i < len; i++)
+            {
+                if (prefix[i] >= target)
+                {
+                    if (ans == 0)
+                        ans = i + 1;
+                    else
+                        ans = Math.Min(ans, i + 1);
+                }
+
+                int ySum = prefix[i];
+                int xSum = prefix[i] - target;
+
+                while (deque.Count > 0 && prefix[deque[0]] <= xSum)
+                {
+                    if (ans == 0)
+                        ans = i - deque[0];
+                    else
+                        ans = Math.Min(ans, i - deque[0]);
+
+                    deque.RemoveAt(0);
+                }
+
+                while (deque.Count > 0 && prefix[deque[deque.Count - 1]] >= prefix[i])
+                {
+                    deque.RemoveAt(deque.Count - 1);
+                }
+
+                deque.Add(i);
+            }
+            return ans;
+        }
     }
 }

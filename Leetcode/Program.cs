@@ -372,9 +372,9 @@ namespace Leetcode
 			//matrix[2] = new int[] { 23,30,34,60 };
 			//bool index = SearchInARotatedSortedArrayI.Search(arr, 0);
 			//Console.WriteLine(index);
-			int[] nums = {45,95,97,-34,-42};
+			int[] nums = {-28,81,-20,28,-29};
 			//int x = FindMinimumInRotatedSortedArray.FindMin(nums);
-			ShortestSubarrayWithSumAtLeastK.ShortestSubarray(nums, 21);
+			//ShortestSubarrayWithSumAtLeastK.ShortestSubarray(nums, 89);
 			Console.ReadLine();
 		}
 	}

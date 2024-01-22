@@ -6,31 +6,51 @@ namespace Leetcode.SlidingWindow
 {
 	class ShortestSubarrayWithSumAtLeastK
 	{
-        public static int ShortestSubarray(int[] nums, int k)
+        public int ShortestSubarray(int[] nums, int k)
         {
-            int left = 0;
-            int right = 0;
-            int len = nums.Length - 1;
-            int minSize = int.MaxValue;
-            long sum = 0;
+            int len = nums.Length;
+            int[] prefix = new int[len];
+            List<int> list = new List<int>();
 
-            while (right <= len)
+            prefix[0] = nums[0];
+
+            int ans = -1;
+
+
+            for (int i = 1; i < len; i++)
+                prefix[i] = prefix[i - 1] + nums[i];
+
+            for (int i = 0; i < len; i++)
             {
-                sum += nums[right];
-
-                if (sum >= k)
+                if (prefix[i] >= k)
                 {
-                    while (left <= right && (sum >= k || nums[left] < 0))
-                    {
-                        if (sum >= k)
-                            minSize = Math.Min(minSize, right - left + 1);
-                        sum -= nums[left];
-                        left++;
-                    }
+                    if (ans == -1)
+                        ans = i + 1;
+                    else
+                        ans = Math.Min(ans, i + 1);
                 }
-                right++;
+
+                int ySum = prefix[i];
+                int xSum = ySum - k;
+
+                while (list.Count > 0 && prefix[list[0]] <= xSum)
+                {
+                    if (ans == -1)
+                        ans = i - list[0];
+                    else
+                        ans = Math.Min(ans, i - list[0]);
+
+                    list.RemoveAt(0);
+                }
+
+                while (list.Count > 0 && prefix[list[list.Count - 1]] >= prefix[i])
+                {
+                    list.RemoveAt(list.Count - 1);
+                }
+
+                list.Add(i);
             }
-            return minSize == int.MaxValue ? -1 : minSize;
+            return ans;
         }
     }
 }
